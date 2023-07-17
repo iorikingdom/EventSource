@@ -63,9 +63,9 @@ public struct ServerMessage {
                 message.event = value.trimmingCharacters(in: .whitespacesAndNewlines)
             case "data":
                 if let existingData = message.data {
-                    message.data = existingData + "\n" + value.trimmingCharacters(in: .whitespacesAndNewlines)
+                    message.data = existingData + "\n" + value
                 } else {
-                    message.data = value.trimmingCharacters(in: .whitespacesAndNewlines)
+                    message.data = value
                 }
             case "time":
                 message.time = value.trimmingCharacters(in: .whitespacesAndNewlines)
